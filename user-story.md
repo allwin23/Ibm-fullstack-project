@@ -1,174 +1,270 @@
 ---
+
 name: User Story
 about: This template defines a user story.
 title: ''
 labels: ''
 assignees: ''
+-------------
 
----
+## User Story Template
 
 **As a** [role]
 **I need** [function]
 **So that** [benefit]
-### Details and Assumptions
-    * [document what you know]
-### Acceptance Criteria
-    gherkin
-    Given [some context]
-    When [certain action is taken]
-    Then [the outcome of action is observed]
 
-----
+### Details and Assumptions
+
+* [Document what you know]
+
+### Acceptance Criteria
+
+```gherkin
+Given [some context]
+When [certain action is taken]
+Then [the outcome is observed]
+```
+
+---
 
 # 1. Finish user stories
+
 **As a** Full-stack developer
 **I need** to complete all user stories for the GiftLink project
-**So that** the team has a clear understanding of the requirements and can start working on them
+**So that** the team has a clear understanding of requirements
 
 ### Details and Assumptions
-* The user stories cover both backend and frontend development tasks
-* The user stories are based on the project requirements and have been discussed and agreed upon by the team
+
+* Covers both frontend and backend tasks
+* Based on agreed project requirements
 
 ### Acceptance Criteria
-Given the project requirements
-When I finish writing the user stories
-Then each user story should clearly state the role, function, benefit, details, assumptions, and acceptance criteria
+
+```gherkin
+Given the project requirements are defined
+When I create user stories
+Then each story must include role, function, and benefit
+
+Given the user stories are written
+When I review them
+Then each story must include details, assumptions, and acceptance criteria
+```
+
+---
 
 # 2. Initialize and populate MongoDB
 
 **As a** Full-stack developer
-**I need** to initialize and populate MongoDB for the GiftLink project
-**So that** the application has a structured and populated database to work with
+**I need** to initialize and populate MongoDB
+**So that** the app has structured data
 
 ### Details and Assumptions
-* MongoDB is the chosen database for this project
-* The database needs to be structured according to the data requirements of the application
-* Initial data is available for population
+
+* MongoDB is used
+* Initial dataset is available
 
 ### Acceptance Criteria
-Given the data requirements and initial data
-When I initialize and populate MongoDB
-Then the database should be set up correctly with all the necessary collections and documents
+
+```gherkin
+Given MongoDB is installed
+When I create database and collections
+Then structure must match requirements
+
+Given initial data is available
+When I import data
+Then all documents must be stored successfully
+```
+
+---
 
 # 3. Run skeleton application
 
 **As a** Full-stack developer
-**I need** to run the skeleton application for the GiftLink project
-**So that** I can verify the basic setup and functionality of the application
+**I need** to run the skeleton app
+**So that** I verify setup
 
 ### Details and Assumptions
-* The skeleton application has been set up with the basic structure and dependencies
-* The application can be run locally for testing and development purposes
+
+* App dependencies are installed
 
 ### Acceptance Criteria
-Given the skeleton application
-When I run the application
-Then it should start successfully without any errors and I should be able to access the application's main page
 
-# 4. Implement a landing page and navigation
+```gherkin
+Given the application is set up
+When I run the server
+Then it should start without errors
+
+Given the server is running
+When I open the app in browser
+Then the main page should load
+```
+
+---
+
+# 4. Landing page and navigation
 
 **As a** Full-stack developer
-**I need** to implement a landing page and navigation for the GiftLink project
-**So that** users can easily navigate through the application and access its features
+**I need** to build landing page and navigation
+**So that** users can navigate easily
 
 ### Details and Assumptions
-* The landing page is the first page users see when they visit the application
-* The navigation should be intuitive and user-friendly, allowing users to easily navigate to different sections of the application
+
+* Navigation should be user-friendly
 
 ### Acceptance Criteria
-Given the design specifications for the landing page and navigation
-When I implement these features
-Then users should be able to see the landing page when they visit the application and use the navigation to go to different sections of the application
 
-# 5. Add authentication components and logic
+```gherkin
+Given user visits the app
+When homepage loads
+Then landing page must be displayed
+
+Given navigation menu
+When user clicks links
+Then correct pages must open
+```
+
+---
+
+# 5. Authentication system
 
 **As a** Full-stack developer
-**I need** to add authentication components and logic to the GiftLink project
-**So that** users can securely log in and access their personal data and features
+**I need** authentication features
+**So that** users access securely
 
 ### Details and Assumptions
-* The authentication system should provide secure access control for the application
-* It should include components for user registration, login, and password recovery
+
+* Includes register & login
 
 ### Acceptance Criteria
-Given the requirements for secure user authentication
-When I implement the authentication components and logic
-Then users should be able to register, log in, recover their password, and access their personal data and features securely
 
+```gherkin
+Given a new user
+When valid data is submitted
+Then account must be created
 
-# 6. Implement Gifts details page
+Given a registered user
+When valid credentials are entered
+Then login must succeed
+```
+
+---
+
+# 6. Gift details page
 
 **As a** Full-stack developer
-**I need** to implement a Gifts details page for the GiftLink project
-**So that** users can view detailed information about each gift
+**I need** a gift details page
+**So that** users see info
 
 ### Details and Assumptions
-* The Gifts details page should display all relevant information about a gift
-* It should be accessible from the main Gifts listing page
+
+* Linked from list page
 
 ### Acceptance Criteria
-Given the requirements for the Gifts details page
-When I implement this feature
-Then users should be able to access the Gifts details page from the main Gifts listing page and view all relevant information about a gift
 
-# 7. Implement a search component
+```gherkin
+Given gift list is displayed
+When user selects an item
+Then details page must open
+
+Given details page loads
+When data is fetched
+Then all info must be shown
+```
+
+---
+
+# 7. Search feature
 
 **As a** Full-stack developer
-**I need** to implement a search component for the GiftLink project
-**So that** users can easily find specific gifts based on their preferences
+**I need** search functionality
+**So that** users find items
 
 ### Details and Assumptions
-* The search component should allow users to search for gifts based on various criteria such as name, category, price, etc.
-* It should provide relevant search results in a user-friendly manner
+
+* Search by name/category
 
 ### Acceptance Criteria
-Given the requirements for the search component
-When I implement this feature
-Then users should be able to use the search component to find specific gifts and view relevant search results
 
-# 8. Design and implement the comments feature
+```gherkin
+Given search bar is available
+When user enters keyword
+Then matching results must appear
+
+Given no match exists
+When search is performed
+Then "no results" message must show
+```
+
+---
+
+# 8. Comments feature
 
 **As a** Full-stack developer
-**I need** to design and implement a comments feature for the GiftLink project
-**So that** users can engage in discussions about the gifts
+**I need** comments system
+**So that** users interact
 
 ### Details and Assumptions
-* The comments feature should allow users to post comments, reply to other comments, and view all comments for a gift
-* It should be intuitive and user-friendly, promoting user engagement and interaction
+
+* Supports posting and viewing
 
 ### Acceptance Criteria
-Given the requirements for the comments feature
-When I design and implement this feature
-Then users should be able to post comments, reply to other comments, and view all comments for a gift
 
-# 9. Containerize the services and applications
+```gherkin
+Given a logged-in user
+When comment is submitted
+Then it must be saved and displayed
+
+Given comments exist
+When page loads
+Then all comments must be visible
+```
+
+---
+
+# 9. Containerization
 
 **As a** Full-stack developer
-**I need** to containerize the services and applications of the GiftLink project
-**So that** the deployment process is simplified and the application runs consistently across different environments
+**I need** Docker containers
+**So that** deployment is consistent
 
 ### Details and Assumptions
-* Containerization involves packaging the application and its dependencies into a container
-* Tools like Docker can be used for this process
+
+* Use Docker
 
 ### Acceptance Criteria
-Given the services and applications of the GiftLink project
-When I containerize them
-Then they should be able to run consistently across different environments and the deployment process should be simplified
 
+```gherkin
+Given application is ready
+When I build containers
+Then services must run inside containers
 
-# 10. Deploy backend and frontend
+Given containers are deployed
+When app runs
+Then behavior must be consistent
+```
+
+---
+
+# 10. Deployment
 
 **As a** Full-stack developer
-**I need** to deploy the backend and frontend of the GiftLink project
-**So that** the application is accessible to users
+**I need** to deploy app
+**So that** users access it
 
 ### Details and Assumptions
-* The backend and frontend have been developed and tested
-* The deployment process involves setting up the server, uploading the application, and configuring the server settings
+
+* Backend & frontend deployed
 
 ### Acceptance Criteria
-Given the backend and frontend of the GiftLink project
-When I deploy them
-Then the application should be accessible to users and function as expected
+
+```gherkin
+Given deployment is complete
+When user visits URL
+Then app must load successfully
+
+Given system is live
+When users interact
+Then all features must work correctly
+```
+
 
